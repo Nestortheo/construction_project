@@ -4,7 +4,7 @@ export default function About(){
     return(
         <section
             id="about"
-            className="bg-[#202522] text-[#EFEEE8] -mt-[81px]"
+            className="bg-[#202522] text-[#EFEEE8] -mt-[81px] scroll-mt-[100px]"
         >
             <div className="
                 grid
