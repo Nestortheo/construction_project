@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Services from "./components/Services";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-col ">   
           <Hero />
           <About />
+          <Services />
         </div>
     </main>
   )

@@ -16,11 +16,11 @@ export default function Hero(){
                 "
                 >
                     <h2 className="p-4 text-sm font-semibold tracking-[0.1em]  text-[#C87532]">ΚΑΤΑΣΚΕΥΕΣ - ΚΙΛΚΙΣ</h2>
-                    <div className="text-6xl font-bold text-[#202522]">
+                    <div className="text-5xl lg:text-6xl font-bold text-[#202522]">
                         <h1>Χτίζουμε</h1>
                         <h1>με συνέπεια.</h1>
                     </div>
-                    <p className="max-w-sm text-base leading-7 text-[#202522]">
+                    <p className="max-w-sm text-sm lg:text-base leading-7 text-[#202522]">
                         Κατασκευαστικές εργασίες, σκυρόδεμα, τοιχοποιία,
                         μονώσεις και εξειδικευμένες λύσεις για σύγχρονες
                         κατασκευές κατοικιών και επαγγελματικών χώρων.

@@ -13,8 +13,8 @@ export default function About(){
 
                 {/* LEFT */}
                 <div className="
-                    p-10 lg:p-14
-                    flex flex-col justify-center
+                    p-10 lg:p-10
+                    flex flex-col justify-start 
                 ">
                     <p className="
                         mb-5
@@ -42,17 +42,21 @@ export default function About(){
 
                 {/* MIDDLE */}
                 <div className="
-                    p-10 lg:p-14
-                    flex flex-col justify-center
+                    p-10 lg:p-10
+                    flex flex-col justify-start
                 ">
                     <p className="
                         text-sm
                         leading-7
                         text-[#d2d4d0]
+                        tracking-tight
                     ">
                         Η AMKOSBAU είναι μια κατασκευαστική εταιρεία
-                        με έδρα το Κιλκίς, με δραστηριότητα σε ένα
-                        ευρύ φάσμα τεχνικών και κατασκευαστικών έργων.
+                        με έδρα το Κιλκίς, που δραστηριοποιείται σε ιδιωτικά 
+                        και επαγγελματικά έργα. Με έμφαση στην ποιότητα,
+                        τη συνέπεια και την ομαλή συνεργασία, αναλαμβάνουμε
+                        κατασκευές κατοικιών, τεχνικές εργασίες και εξειδικευμένες
+                        λύσεις, προσφέροντας αποτέλεσμα που αντέχει στον χρόνο.
                     </p>
 
                     <a

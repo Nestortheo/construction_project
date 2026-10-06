@@ -55,6 +55,12 @@ export default function Navbar(){
                         Αρχική
                     </a>
                     <a
+                        href="#about"
+                        className="px-4 py-3 text-sm text-[#202522] hover:text-[#c87532] transition-colors"
+                    >
+                        Σχετικά
+                    </a>
+                    <a
                         href="#services"
                          className="px-4 py-3 text-sm text-[#202522] hover:text-[#c87532] transition-colors"
 
@@ -66,12 +72,6 @@ export default function Navbar(){
                         className="px-4 py-3 text-sm text-[#202522] hover:text-[#c87532] transition-colors"
                     >
                         Έργα
-                    </a>
-                    <a
-                        href="#about"
-                        className="px-4 py-3 text-sm text-[#202522] hover:text-[#c87532] transition-colors"
-                    >
-                        Σχετικά
                     </a>
                     <a
                         href="#contact"
