@@ -1,4 +1,12 @@
 import Image from "next/image";
+import {
+    MessageCircle,
+    FileText,
+    HardHat,
+    CircleCheck,
+    ArrowRight
+} from "lucide-react";
+
 export default function About(){
 
     return(
