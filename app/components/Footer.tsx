@@ -21,6 +21,7 @@ export default function Footer(){
                 py-12
                 grid
                 grid-cols-1
+                gap-10 lg:gap-8
                 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]
             "
             >
