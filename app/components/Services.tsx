@@ -51,6 +51,7 @@ export default function Services(){
                 grid
                 grid-cols-1
                 gap-6
+                p-10
             ">
                 <p className="
                     text-xs

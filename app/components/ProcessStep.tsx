@@ -21,7 +21,7 @@ export default function ProcessStep({
         <div className="flex flex-row gap-4">
             
             <div className="
-                 h-12 w-12
+                h-12 w-12
                 shrink-0
                 rounded-full
                 bg-neutral-200
