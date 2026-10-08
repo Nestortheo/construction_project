@@ -148,7 +148,7 @@ export default function Form(){
                         placeholder="π.χ 6912345678"
                         className="border w-full px-2 py-2 border-neutral-500"
                         onChange={(event) => {
-                            const value = event.target.value.replace(/\D/g, "");
+                            const value = event.target.value.replace(/[^\d+ ]/g, "");
 
                             setForm((prev) => ({
                                 ...prev,
