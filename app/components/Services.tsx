@@ -45,7 +45,7 @@ export default function Services(){
     return(
         <section
         id="services"
-        className="text-[#EFEEE8] mt-24"
+        className="scroll-mt-[100px] text-[#EFEEE8] mt-24"
         >
             <div className="
                 grid
