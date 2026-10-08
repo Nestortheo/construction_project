@@ -13,7 +13,7 @@ import {
 
 export default function Footer(){
     return(
-        <footer className="bg-[#1B201E] border-t border-[#66543B] mt-2">
+        <footer className="bg-[#1B201E] border-t border-[#66543B] mt-2 text-[#EFEEE8]">
             <div className="
                 max-w-6xl
                 mx-auto
