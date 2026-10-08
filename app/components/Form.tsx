@@ -39,9 +39,6 @@ export default function Form(){
     async function handleSubmit(event:React.FormEvent<HTMLFormElement>){
         event.preventDefault()
 
-        setMessage(null);
-        setSubmitting(true);
-
         const full_name = form.full_name.trim()
         const email = form.email.trim()
         const phone = form.phone.trim()
@@ -54,6 +51,16 @@ export default function Form(){
             })
             return;
         }
+        setMessage(null);
+        setSubmitting(true);
+
+         const payload = {
+            full_name,
+            email,
+            phone,
+            notes,
+        };
+        
         
         //console.log("Payload ->", form)
         try{
@@ -62,24 +69,39 @@ export default function Form(){
                 headers:{
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(form)
+                body: JSON.stringify(payload)
             })
             const data = await response.json();
             console.log("data is ->",data)
+
+            if (!response.ok) {
+                throw new Error(data.message || "Something went wrong.");
+            }
+
+            setMessage({
+                msg:data.message,
+                type:"success"
+            })
+            setForm(EMPTY_FORM)
             
         }
-        catch(error){
+        catch(error:unknown){
+            let errorMessage = "Something went wrong.";
+
+            if (error instanceof Error) {
+            errorMessage = error.message;
+            }
+
             setMessage({
-                msg:"Something went wrong during fetching data",
-                type:"error"
-            })
+                msg: errorMessage,
+                type: "error",
+            });
         }
         finally{
             setSubmitting(false)
-            setForm(EMPTY_FORM)
+            
         }
 
-        
     }
 
     return(
@@ -120,11 +142,19 @@ export default function Form(){
                 <div className="flex flex-col gap-2">
                     <label>Τηλέφωνο</label>
                     <input 
+                        type="tel"
                         name="phone"
                         value={form.phone}
                         placeholder="π.χ 6912345678"
                         className="border w-full px-2 py-2 border-neutral-500"
-                        onChange={handleChange}
+                        onChange={(event) => {
+                            const value = event.target.value.replace(/\D/g, "");
+
+                            setForm((prev) => ({
+                                ...prev,
+                                phone: value,
+                            }));
+                        }}
                         required
 
                     />
@@ -142,6 +172,8 @@ export default function Form(){
                     />
                 </div>
                 <button
+                    type="submit"
+                    disabled={submitting}
                     className="
                         w-full
                         bg-[#C87532]
@@ -155,15 +187,27 @@ export default function Form(){
                         transition-colors
                         hover:bg-[#b5652b]
                         cursor-pointer
+                        disabled:opacity-60
+                        disabled:cursor-not-allowed
                     "
                 >
-                    <span>Αποστολή μηνύματος</span>
+                    {submitting ? "Αποστολή..." : "Αποστολή"}
 
                     <ArrowRight
                         size={22}
                         strokeWidth={1.5}
                     />
                 </button>
+                {message && (
+                    <p className={
+                        message.type === "success"
+                        ? "text-sm text-green-700"
+                        : "text-sm text-red-700"
+                        }
+                    >
+                        {message.msg}
+                    </p>
+                )}
             </div>
         </form>
     )

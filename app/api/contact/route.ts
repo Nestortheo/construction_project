@@ -34,6 +34,6 @@ export async function POST(request: Request){
      console.log("Email sent:", data);
 
     return Response.json({
-        message: "Message received",
+        message: "Επιτυχής Αποστολή!",
     })
 }
