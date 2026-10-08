@@ -12,7 +12,7 @@ export default function Contact(){
     return(
         <section 
             id="contact"
-            className="bg-[#202522] scroll-mt-[100px]"
+            className="bg-[#202522] scroll-mt-[100px] text-[#EFEEE8]"
         >   
             <div className="
                 grid
