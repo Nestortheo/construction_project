@@ -15,9 +15,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AMKOSBAU | Κατασκευές & Τεχνικά Έργα",
+  metadataBase: new URL("https://www.amkosbau.gr"),
+
+  title: "AMKOSBAU | Κατασκευαστικές Εργασίες στο Κιλκίς",
+
   description:
-    "AMKOSBAU — Κατασκευαστικές εργασίες, σκυρόδεμα, τοιχοποιία, μονώσεις και τεχνικά έργα.",
+    "Η AMKOSBAU αναλαμβάνει κατασκευαστικές εργασίες κατοικιών, σκυρόδεμα, τοιχοποιία, μονώσεις και στέγες στο Κιλκίς.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "AMKOSBAU | Κατασκευές στο Κιλκίς",
+    description:
+      "Κατασκευαστικές εργασίες με συνέπεια και ποιότητα στο Κιλκίς.",
+    url: "https://www.amkosbau.gr",
+    siteName: "AMKOSBAU",
+    locale: "el_GR",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

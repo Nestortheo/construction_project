@@ -70,9 +70,10 @@ export default function Hero(){
                                 duration-200
                                 ease-in-out
                                 hover:scale-105
+                                flex items-center
                             "
                         >
-                            <div className="flex items-center gap-1">
+                            <div className="flex gap-1">
                                 <span className="text-sm font-semibold text-white">
                                     ΥΠΗΡΕΣΙΕΣ
                                 </span>
